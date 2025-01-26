@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendship Type Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>What Kind of Friend Are You?</h1>
+            <p>Answer a few quick questions to find out!</p>
+        </header>
+
+        <!-- Character Selection -->
+        <section class="character-selection">
+            <h2>Are you analyzing a Male or Female Friend?</h2>
+            <div class="character-icons">
+                <div class="character male" onclick="selectGender('male')">
+                    <img src="assets/images/male-icon.png" alt="Male">
+                    <p>Male</p>
+                </div>
+                <div class="character female" onclick="selectGender('female')">
+                    <img src="assets/images/female-icon.png" alt="Female">
+                    <p>Female</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="quiz-section hidden" id="quizSection">
+            <h2 id="questionTitle">Question 1</h2>
+            <p id="questionText">Do you feel comfortable sharing your struggles with this person?</p>
+            <div class="answers">
+                <button onclick="answerQuestion('yes')">
+                    <img src="assets/images/yes-emoji.png" alt="Yes"> Yes
+                </button>
+                <button onclick="answerQuestion('no')">
+                    <img src="assets/images/no-emoji.png" alt="No"> No
+                </button>
+                <button onclick="answerQuestion('maybe')">
+                    <img src="assets/images/maybe-emoji.png" alt="Maybe"> Maybe
+                </button>
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section class="result-section hidden" id="resultSection">
+            <h2>Your Result:</h2>
+            <p id="resultText">You're best friends!</p>
+            <button onclick="restartQuiz()">Take the Quiz Again</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
